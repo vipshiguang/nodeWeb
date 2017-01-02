@@ -37,6 +37,8 @@ app.use(cookieParser());
 app.use(log4js.connectLogger(logger, {level: 'auto', format:':method :url'}));
 
 app.use(session({
+  resave:false,//添加这行
+  saveUninitialized: true,//添加这行
   secret:'recommand 128 bytes random string',
   cookie: {maxAge:60 * 1000}
 }));
@@ -85,6 +87,8 @@ app.use(function(err, req, res, next) {
 
 
 app.use(session({
+  resave:false,//添加这行
+  saveUninitialized: true,//添加这行
   // 假如你不想使用 redis 而想要使用 memcached 的话，代码改动也不会超过 5 行。
   // 这些 store 都遵循着统一的接口，凡是实现了那些接口的库，都可以作为 session 的 store 使用，比如都需要实现 .get(keyString) 和 .set(keyString, value) 方法。
   // 编写自己的 store 也很简单
