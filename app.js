@@ -43,8 +43,8 @@ app.use(session({
   cookie: {maxAge:60 * 1000}
 }));
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'bower_components')));
+app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/bower_components')));
 app.use(flash());
 
 app.engine('.html', ejs.__express);
