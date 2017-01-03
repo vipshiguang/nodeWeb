@@ -9,9 +9,6 @@ bower安装目录
 bootstrap通过grunt重新编译过，加入自定义样式
 grunt文件太大，仅提交了编译后的css及js文件
 
-#common
-静态资源文件
-
 #conf
 基本配置文件
 lo4j mysql数据库连接配置
@@ -26,7 +23,7 @@ lo4j mysql数据库连接配置
 npm安装的组件
 
 #public
-自定义css js文件
+自定义css js文件  静态资源文件
 
 #routes
 exprass路由配置
